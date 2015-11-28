@@ -18,3 +18,7 @@ sysctl -p
 ##unbound
 
   * if Unbound not start, check the config with `unbound-checkconf`
+
+##collectd
+
+  * if Collectd not start, check with `collectd -t` or `collectd -f`
