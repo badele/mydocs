@@ -17,8 +17,12 @@ sysctl -p
 
 ##unbound
 
-  * if Unbound not start, check the config with `unbound-checkconf`
+  * **Diagnose**
+   * Check the unbound configuration with `unbound-checkconf`
 
 ##collectd
 
-  * if Collectd not start, check with `collectd -t` or `collectd -f`
+  * **Diagnose**
+   * Check collectd config `collectd -t`
+   * Check collecd plugins `collectd -T`
+   * Check collecd in foreground mode `collectd -f`
