@@ -14,15 +14,18 @@ nano /etc/sysctl.conf
 #
 sysctl -p
 ```
-
 ##unbound
 
-  * **Diagnose**
-   * Check the unbound configuration with `unbound-checkconf`
+ * **Diagnose**
+  * Debug the salt minion `salt-minion -l debug`
+##unbound
+
+ * **Diagnose**
+  * Check the unbound configuration with `unbound-checkconf`
 
 ##collectd
 
-  * **Diagnose**
-   * Check collectd config `collectd -t`
-   * Check collecd plugins `collectd -T`
-   * Check collecd in foreground mode `collectd -f`
+ * **Diagnose**
+  * Check collectd config `collectd -t`
+  * Check collecd plugins `collectd -T`
+  * Check collecd in foreground mode `collectd -f`
