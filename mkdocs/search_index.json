@@ -1,0 +1,39 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Mydocs\n\n\nProxmox/OpenVZ\n\n\nsysctl\n\n\nIf you receive this message \nsysctl: permission denied on key 'xxx.xxx.xxx'\n in your openvz container. You cannot change the sysctl options in the openvz container, for that, you can set this options in the host hypervisor. \n\n\n# In the hypervisor\nnano /etc/sysctl.conf\n#xxx.xxx.xxx=somevalue\n#\nsysctl -p\n\n\n\n\nunbound\n\n\n\n\nDiagnose\n\n\nDebug the salt minion \nsalt-minion -l debug\n\n\n\n\nunbound\n\n\n\n\nDiagnose\n\n\nCheck the unbound configuration with \nunbound-checkconf\n\n\n\n\ncollectd\n\n\n\n\nDiagnose\n\n\nCheck collectd config \ncollectd -t\n\n\nCheck collecd plugins \ncollectd -T\n\n\nCheck collecd in foreground mode \ncollectd -f\n\n\n\n\nOh My Zsh\n\n\n\n\nDisable git status in prompt\n\n\nSome project have many files, and \nOh My Zsh\n is slow for respond, For some project, you can disable git prompt feature. Go to your git project and type this command\n\n\ngit config --add oh-my-zsh.hide-status 1", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#mydocs", 
+            "text": "", 
+            "title": "Mydocs"
+        }, 
+        {
+            "location": "/#proxmoxopenvz", 
+            "text": "sysctl  If you receive this message  sysctl: permission denied on key 'xxx.xxx.xxx'  in your openvz container. You cannot change the sysctl options in the openvz container, for that, you can set this options in the host hypervisor.   # In the hypervisor\nnano /etc/sysctl.conf\n#xxx.xxx.xxx=somevalue\n#\nsysctl -p", 
+            "title": "Proxmox/OpenVZ"
+        }, 
+        {
+            "location": "/#unbound", 
+            "text": "Diagnose  Debug the salt minion  salt-minion -l debug", 
+            "title": "unbound"
+        }, 
+        {
+            "location": "/#unbound_1", 
+            "text": "Diagnose  Check the unbound configuration with  unbound-checkconf", 
+            "title": "unbound"
+        }, 
+        {
+            "location": "/#collectd", 
+            "text": "Diagnose  Check collectd config  collectd -t  Check collecd plugins  collectd -T  Check collecd in foreground mode  collectd -f", 
+            "title": "collectd"
+        }, 
+        {
+            "location": "/#oh-my-zsh", 
+            "text": "Disable git status in prompt  Some project have many files, and  Oh My Zsh  is slow for respond, For some project, you can disable git prompt feature. Go to your git project and type this command  git config --add oh-my-zsh.hide-status 1", 
+            "title": "Oh My Zsh"
+        }
+    ]
+}
