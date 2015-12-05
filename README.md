@@ -34,4 +34,4 @@ sysctl -p
 
  * **Disable git status in prompt**
   * Some project have many files, and `Oh My Zsh` is slow for respond, For some project, you can disable git prompt feature. Go to your git project and type this command
-   * `git config –global oh-my-zsh.hide-status 1`
+   * `git config --add oh-my-zsh.hide-status 1`
