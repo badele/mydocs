@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Bruno Adele">
+        <link rel="canonical" href="http://badele.github.io/mydocs/development/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+
+	<title>Development - My Docs</title>
+
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="..">My Docs</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="..">Main</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../system/">System</a>
+                    </li>
+                
+                
+                
+                    <li class="active">
+                        <a href="./">Development</a>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../system/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="prev" >
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a href="https://github.com/badele/mydocs/">
+                            
+                                <i class="fa fa-github"></i>
+                            
+                            GitHub
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#developement">Developement</a></li>
+        
+            <li><a href="#git">Git</a></li>
+        
+            <li><a href="#github">Github</a></li>
+        
+            <li><a href="#mkdocs-github">Mkdocs &amp; Github</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="developement">Developement<a class="headerlink" href="#developement" title="Permanent link"></a></h1>
+<h2 id="git">Git<a class="headerlink" href="#git" title="Permanent link"></a></h2>
+<h3 id="commit">Commit<a class="headerlink" href="#commit" title="Permanent link"></a></h3>
+<h4 id="cancel-commit">Cancel commit<a class="headerlink" href="#cancel-commit" title="Permanent link"></a></h4>
+<pre><code>git reset HEAD~1
+</code></pre>
+<h4 id="delete-files">Delete files<a class="headerlink" href="#delete-files" title="Permanent link"></a></h4>
+<h5 id="valid-deleted-file-with-rm">Valid deleted file with rm<a class="headerlink" href="#valid-deleted-file-with-rm" title="Permanent link"></a></h5>
+<pre><code>git ls-files --deleted -z | xargs -0 git rm
+</code></pre>
+<h5 id="delete-file-from-git-repository">Delete file from Git repository<a class="headerlink" href="#delete-file-from-git-repository" title="Permanent link"></a></h5>
+<pre><code>git reset HEAD filename/directoryname
+</code></pre>
+<h3 id="branchs">Branchs<a class="headerlink" href="#branchs" title="Permanent link"></a></h3>
+<h4 id="reset-branch">Reset branch<a class="headerlink" href="#reset-branch" title="Permanent link"></a></h4>
+<pre><code>git checkout mybranch
+git reset --hard origin/mybranch
+</code></pre>
+<h4 id="delete-local-branch">Delete local branch<a class="headerlink" href="#delete-local-branch" title="Permanent link"></a></h4>
+<pre><code>git branch -d the_local_branch
+git branch -D the_local_branch # Force
+</code></pre>
+<h4 id="delete-remote-branch">Delete remote branch<a class="headerlink" href="#delete-remote-branch" title="Permanent link"></a></h4>
+<pre><code>git push origin :the_remote_branch
+</code></pre>
+<h4 id="rename-branch-or-move-branch">Rename branch or move branch<a class="headerlink" href="#rename-branch-or-move-branch" title="Permanent link"></a></h4>
+<pre><code>git branch -m oldbranch newbranch
+</code></pre>
+<h3 id="commit_1">Commit<a class="headerlink" href="#commit_1" title="Permanent link"></a></h3>
+<h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link"></a></h3>
+<h4 id="display-log-commit">Display log commit<a class="headerlink" href="#display-log-commit" title="Permanent link"></a></h4>
+<p>In you git <code>.gitconfig</code></p>
+<pre><code># In .gitconfig
+[alias]
+lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+lg = !"git lg1"
+</code></pre>
+<h4 id="rebase-by-default-when-doing-git-pull">Rebase by default when doing git pull<a class="headerlink" href="#rebase-by-default-when-doing-git-pull" title="Permanent link"></a></h4>
+<pre><code>git config --global pull.rebase true
+</code></pre>
+<h2 id="github">Github<a class="headerlink" href="#github" title="Permanent link"></a></h2>
+<h3 id="reset-github-fork">Reset Github fork<a class="headerlink" href="#reset-github-fork" title="Permanent link"></a></h3>
+<pre><code>#http://scribu.net/blog/resetting-your-github-fork.html
+git remote add upstream git://github.com/wp-cli/wp-cli.git
+git fetch upstream
+git branch backup
+git checkout upstream/master -B master
+git push --force
+</code></pre>
+<h2 id="mkdocs-github">Mkdocs &amp; Github<a class="headerlink" href="#mkdocs-github" title="Permanent link"></a></h2>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link"></a></h3>
+<pre><code>pip install mkdocs
+</code></pre>
+<h3 id="configuration_1">Configuration<a class="headerlink" href="#configuration_1" title="Permanent link"></a></h3>
+<p>Create documentation project with</p>
+<pre><code>mkdocs new mydocs
+</code></pre>
+<p>You can see the result in the mydocs folder</p>
+<pre><code>|-- mydocs              # Root mkdocs directory
+    |-- index.md        # File documentation
+|-- mkdocs.yml          # config file
+</code></pre>
+<p>Edit you <code>mkdocs.yml</code>    </p>
+<pre><code class="no-highlight">pages:
+- 'index.md'
+</code></pre>
+
+<p>Edit the <code>index.md</code> document with markdown syntax.</p>
+<p>Now you can see your modification with <code>mkdocs serve</code> http://localhost:8000</p>
+<h3 id="deploy-to-github">Deploy to github<a class="headerlink" href="#deploy-to-github" title="Permanent link"></a></h3>
+<h3 id="prepare-github-project-first-time">Prepare Github project (First time)<a class="headerlink" href="#prepare-github-project-first-time" title="Permanent link"></a></h3>
+<pre><code>git clone github.com/user/repository.git
+cd repository
+mkdocs gh-deploy --clean
+</code></pre>
+<h3 id="push-the-documentation">Push the documentation<a class="headerlink" href="#push-the-documentation" title="Permanent link"></a></h3>
+<p>After updated your documentation, you can push to github</p>
+<pre><code>mkdocs gh-deploy
+</code></pre></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+                <p>Documentations in Creative Commons. Twitter: <a href="https://twitter.com/jesuislibre">Bruno Adele</a> / Website: <a href="http://bruno.adele.im/">bruno.adele.im</a>.</p>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
