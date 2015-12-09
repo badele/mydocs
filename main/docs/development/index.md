@@ -1,5 +1,16 @@
 # Developement
 
+## Shell
+
+### Awk
+
+#### Cut column
+
+```bash
+lsblk -n | awk '{ print $1,$7}'
+```
+
+
 ## Git
 ### Commit
 
