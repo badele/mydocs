@@ -2,6 +2,16 @@
 
 ## Proxmox / OpenVZ
 
+### sysdig
+
+```bash
+sysdig -cl # list-chisels
+sysdig -w dumpfile.scap # Write dump
+sysdig -r dumpfile.scap # Read dump
+
+csysdig -r dumpfile.scap # Ncurse GUI & Read dump
+```
+
 ### sysctl
 
 If you receive this message `sysctl: permission denied on key 'xxx.xxx.xxx'` in your openvz container. You cannot change the sysctl options in the openvz container, for that, you can set this options in the host hypervisor. 
