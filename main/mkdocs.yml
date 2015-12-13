@@ -5,6 +5,9 @@ site_author: Bruno Adele
 
 repo_url: https://github.com/badele/mydocs/
 
+theme: yeti
+
+
 pages:
   - Main: index.md
   - System: system/index.md
@@ -12,7 +15,7 @@ pages:
 
 markdown_extensions:
     - toc:
-        permalink: 
+        permalink: _
     - admonition:
 
 copyright: 'Documentations in Creative Commons. Twitter: <a href="https://twitter.com/jesuislibre">Bruno Adele</a> / Website: <a href="http://bruno.adele.im/">bruno.adele.im</a>.'

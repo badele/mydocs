@@ -10,6 +10,16 @@
 lsblk -n | awk '{ print $1,$7}'
 ```
 
+## Python
+
+### Pip
+
+Install the git package version
+
+    # From command line
+    pip install git+https://github.com/username/project.git@branchname
+    # in the requirement file
+    -e git+https://github.com/username/projecyt.git@branchname#egg=project
 
 ## Git
 ### Commit
