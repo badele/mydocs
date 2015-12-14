@@ -2,6 +2,23 @@
 
 ## Proxmox / OpenVZ
 
+### tcpdump
+
+Howto detect the close session cycle
+
+Terminal-1
+```bash
+tcpdump -ni eth0 "tcp[tcpflags] & (tcp-fin) != 0" -w /tmp/tcpdump
+```
+Terminal-2
+```bash
+netstat -an | grep CLOSE | sort > /tmp/diff1
+sleep 60
+netstat -an | grep CLOSE | sort > /tmp/diff2
+diff /tmp/diff1 /tmp/diff2
+tcpdump  "tcp[tcpflags] & (tcp-fin) != 0" -r /tmp/tcpdump
+```
+
 ### sysdig
 
 ```bash
