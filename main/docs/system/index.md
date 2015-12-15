@@ -2,6 +2,15 @@
 
 ## Proxmox / OpenVZ
 
+### Rsync
+
+No change owner file permision on remote
+
+```bash
+rsync -avr --no-o xxxx
+```
+
+
 ### tcpdump
 
 Howto detect the close session cycle
