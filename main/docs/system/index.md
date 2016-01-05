@@ -1,5 +1,40 @@
 # System
 
+## pptp
+
+### Create pptp account
+
+```bash
+pptpsetup --create profilename --server pptp_server_hostname --username username --password PASSWORD --encrypt
+```
+
+### Connect or Disconnect to pptp server
+
+
+```bash
+pon profilename
+poff profilename
+```
+
+### Route
+
+For automatically add route when ppp interface is up, you can add the script into this folder `/etc/ppp/ip-up.d/route-to-ppp.sh`
+
+```bash
+#!/bin/bash
+
+IFACE="ppp0"
+
+NET=$(ifconfig $IFACE | egrep -o "inet [0-9]+\.[0-9]+\.[0-9]+\.[0-9]+" | cut -d" " -f2 | cut -d"." -f1-3).0
+route add -net ${NET} dev ${IFACE}
+```
+
+
+
+
+
+
+
 ## Proxmox / OpenVZ
 
 ### Rsync
@@ -51,6 +86,13 @@ sysctl -p
 ```
 
 ## Salt
+
+### salt-master command
+
+    # Set state on all computers
+    salt '*' state.highstate
+    # Set specific state 
+    salt '*' state.apply your_statename,your_statename1
 
  * **Diagnose**
   * Debug the salt minion `salt-minion -l debug`
