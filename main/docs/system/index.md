@@ -48,12 +48,20 @@ rsync -avr --no-o xxxx
 
 ### tcpdump
 
+Show detailed packet information
+
+```bash
+tcpdump -i etho  -vv -s 1600
+```
+
+
 Howto detect the close session cycle
 
 Terminal-1
 ```bash
 tcpdump -ni eth0 "tcp[tcpflags] & (tcp-fin) != 0" -w /tmp/tcpdump
 ```
+
 Terminal-2
 ```bash
 netstat -an | grep CLOSE | sort > /tmp/diff1
