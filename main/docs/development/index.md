@@ -22,6 +22,11 @@ Install the git package version
     -e git+https://github.com/username/projecyt.git@branchname#egg=project
 
 ## Git
+
+### Status
+    # Ignore untracked files
+    git config status.showuntrackedfiles no
+
 ### Commit
 
 #### Cancel commit
