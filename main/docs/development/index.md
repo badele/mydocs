@@ -7,7 +7,8 @@
 #### Cut column
 
 ```bash
-lsblk -n | awk '{ print $1,$7}'
+lsblk -n | awk -F'{ print $1,$7}'
+ls -alh | awk -F '-' { print $1,$7}'
 ```
 
 ## Python
