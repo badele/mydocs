@@ -11,6 +11,15 @@ lsblk -n | awk -F'{ print $1,$7}'
 ls -alh | awk -F '-' { print $1,$7}'
 ```
 
+### Grep
+
+#### Recursively with filename
+
+```bash
+grep -R "search text" --include "filename.ext"
+```
+
+
 ## Python
 
 ### Pip
