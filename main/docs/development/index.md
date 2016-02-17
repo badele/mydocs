@@ -19,6 +19,16 @@ ls -alh | awk -F '-' { print $1,$7}'
 grep -R "search text" --include "filename.ext"
 ```
 
+### Perl
+
+Replace between markup
+
+```bash
+    # http://superuser.com/questions/440013/how-to-replace-part-of-a-text-file-between-markers-with-another-text-file
+    newContent=$(cat src/filename)
+    sudo perl -0777 -i -pe "s/(### BEGIN MARKUP\\n).*(\\n### END MARKUP)/\$1$newContent\n\$2/s" dst/filename
+```
+
 
 ## Python
 
