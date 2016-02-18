@@ -2,6 +2,13 @@
 
 ## Shell
 
+### Bash
+
+```bash
+set -x # Enable debug bash script
+set +x # Disable debug bash script
+```
+
 ### Awk
 
 #### Cut column
