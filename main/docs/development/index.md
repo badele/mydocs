@@ -46,6 +46,13 @@ Install the git package version
     pip install git+https://github.com/username/project.git@branchname
     # in the requirement file
     -e git+https://github.com/username/projecyt.git@branchname#egg=project
+    
+### print
+
+Print without return line
+```python
+print('.',end="",flush=True)
+```
 
 ## Git
 
