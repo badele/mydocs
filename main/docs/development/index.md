@@ -9,6 +9,14 @@ set -x # Enable debug bash script
 set +x # Disable debug bash script
 ```
 
+### Sed
+
+Replace in same file
+
+```bash
+sed -i.bak s/STRING_TO_REPLACE/STRING_TO_REPLACE_IT/g filename
+```
+
 ### Awk
 
 #### Cut column
