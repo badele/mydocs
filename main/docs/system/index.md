@@ -1,5 +1,13 @@
 # System
 
+## SSH
+
+Show ssh fingerprint
+
+```bash
+ssh-keygen -l -E md5 -f ~/.ssh/id_dsa.pub
+```
+
 ## pptp
 
 ### Create pptp account
