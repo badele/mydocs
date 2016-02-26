@@ -61,6 +61,11 @@ Print without return line
 ```python
 print('.',end="",flush=True)
 ```
+### If in one line
+
+```python
+value = 1 if 'true' in var  else 0
+```
 
 ## Git
 
