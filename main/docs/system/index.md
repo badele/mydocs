@@ -1,5 +1,23 @@
 # System
 
+## Route
+
+Clear route cache
+```bash
+ip route flush cache
+```
+
+Show route use for destination
+
+```bash
+ip route get 8.8.8.8
+
+8.8.8.8 via 10.75.16.2 dev eth0  src 10.75.16.146 
+    cache 
+```
+
+
+
 ## SSH
 
 Show ssh fingerprint
