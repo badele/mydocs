@@ -7,6 +7,17 @@ Clear route cache
 ip route flush cache
 ```
 
+List chache ofr destination
+
+```bash
+ip route list cache match 10.19.2.70
+
+10.19.2.70 from 10.75.16.146 dev eth0 
+    cache 
+10.19.2.70 dev eth0  src 10.75.16.146 
+    cache <redirected> 
+```
+
 Show route use for destination
 
 ```bash
