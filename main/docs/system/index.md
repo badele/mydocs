@@ -107,6 +107,14 @@ netstat -an | grep CLOSE | sort > /tmp/diff2
 diff /tmp/diff1 /tmp/diff2
 tcpdump  "tcp[tcpflags] & (tcp-fin) != 0" -r /tmp/tcpdump
 ```
+### Swap
+
+For free swap
+
+```bash
+swapoff -a
+swapon -a
+```
 
 ### sysdig
 
