@@ -142,10 +142,19 @@ sysctl -p
 
 ### salt-master command
 
-    # Set state on all computers
-    salt '*' state.highstate
-    # Set specific state 
-    salt '*' state.apply your_statename,your_statename1
+```bash
+# Set state on all computers
+salt '*' state.highstate
+
+# Set specific state 
+salt '*' state.apply your_statename,your_statename1
+
+# Show the top state result
+salt '*' state.show_top
+
+```
+
+# Show
 
  * **Diagnose**
   * Debug the salt minion `salt-minion -l debug`
