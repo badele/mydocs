@@ -152,6 +152,9 @@ salt '*' state.apply your_statename,your_statename1
 # Show the top state result
 salt '*' state.show_top
 
+# Show minion version
+salt '*' test.version
+
 ```
 
 # Show
