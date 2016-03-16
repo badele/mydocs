@@ -27,6 +27,20 @@ ip route get 8.8.8.8
     cache 
 ```
 
+## Disk
+
+### Resize partition and filesystem
+
+```bash
+fdisk /dev/xxx
+p
+d
+n
+w
+
+#reboot 
+resize2fs /dev/xxx
+```
 
 
 ## SSH
