@@ -1,5 +1,14 @@
 # System
 
+## Process
+
+Change process limitation without restart
+
+```bash
+prlimit --pid 23403 --nofile=2048:2048`
+```
+
+
 ## Route
 
 Clear route cache
