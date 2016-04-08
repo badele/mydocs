@@ -112,6 +112,7 @@ Show detailed packet information
 
 ```bash
 tcpdump -i etho  -vv -s 1600
+tcpdump -vni eth0 -XX -s 0
 ```
 
 
