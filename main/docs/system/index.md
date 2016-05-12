@@ -182,6 +182,9 @@ salt '*' test.version
 # Mass update
 salt '*' cmd.run "curl -L https://bootstrap.saltstack.com | sh -s -- -PA masterip stable 2015.8"
 
+# Show mass minion state
+salt-run manage.status
+
 ```
 
 # Show
