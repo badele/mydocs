@@ -186,8 +186,14 @@ salt '*' cmd.run "curl -L https://bootstrap.saltstack.com | sh -s -- -PA masteri
 curl -L https://bootstrap.saltstack.com | sh -s -- -P -M stable 2015.8
 curl -L https://bootstrap.saltstack.com | sh -s -- -P -M git v2015.8.8
 
-# Show mass minion state
+# Show mass minion state (is up)
 salt-run manage.status
+
+# Show minion job (from master)
+salt-run jobs.active
+
+# Kill job
+salt '*' saltutil.kill_job JOBID
 
 ```
 
