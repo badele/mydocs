@@ -90,7 +90,19 @@ route add -net ${NET} dev ${IFACE}
 ```
 
 
+## Databse
 
+### PostgreSQL
+
+Show sessions
+
+```SQL
+SELECT datname as database,
+       usename as username,
+       application_name as application,
+       client_addr as client_address
+  FROM pg_stat_activity
+```
 
 
 
