@@ -1,5 +1,13 @@
 # System
 
+## User
+
+Force user change password next logon
+
+```bash
+sudo chage -d 0 username
+```
+
 ## Process
 
 Change process limitation without restart
