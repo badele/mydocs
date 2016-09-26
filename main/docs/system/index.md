@@ -59,6 +59,19 @@ w
 resize2fs /dev/xxx
 ```
 
+## TMUX
+
+Sharing the tmux session
+
+On terminal you would like sharing
+```bash
+tmux new-session -s shared
+```
+On another computer
+```bash
+tmux attach-session -t shared
+```
+
 
 ## SSH
 
