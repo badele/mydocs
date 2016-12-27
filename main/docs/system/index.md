@@ -59,6 +59,12 @@ w
 resize2fs /dev/xxx
 ```
 
+### Repair vfat filesystem
+
+```bash
+dosfsck -w -r -l -a -v -t /dev/sdb1
+```
+
 ## TMUX
 
 Sharing the tmux session
