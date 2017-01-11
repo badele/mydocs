@@ -236,10 +236,14 @@ salt '*' saltutil.kill_job JOBID
 
 ```
 
-# Show
+### Debug
 
- * **Diagnose**
-  * Debug the salt minion `salt-minion -l debug`
+```bash
+# Debug salt-call command
+salt-call state.highstate -lall
+# Debug minion
+salt-minion -l debug
+```
 
 ## Unbound
 
