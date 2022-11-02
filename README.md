@@ -1,3 +1,14 @@
-# MyDocs
-
-The Mkdocs project for http://badele.github.io/mydocs/ website documentation
+# Mydocs
+* app
+  * filemanager
+    * [ranger](app-filemanager-ranger.md)
+  * security
+    * [gpg](app-security-gpg.md)
+    * [pass](app-security-pass.md)
+* computers
+  * linux
+    * [installation](computers-linux-installation.md)
+* system
+  * disk
+    * [luks-on-usb-disk](system-disk-luks-on-usb-disk.md)
+    * [snapper](system-disk-snapper.md)
