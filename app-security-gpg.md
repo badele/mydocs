@@ -43,17 +43,72 @@ gpg --send-key ${GPG_USERID}
 gpg-backup-keys
 
 # Secure keys (delete primary key from computer)
+# WARNING, delete only the primary key, it is also requested to delete the sub-keys
 gpg --delete-secret-key ${GPG_USERID}
-gpg --import ${GPG_BACKUP_DIR}/lastkeys/secret_subkeys.gpg
 
 # Verify the computer not contain primary key
-gpg -K # You should see 'sec #', indicates that the master key does not have a private key
+gpg -K # You should see 'sec#', indicates that the master key does not have a private key
 ```
 
-## Update algorithme
+# Re-import the private key & sub-keys
+gpg --import ${GPG_BACKUP_DIR}/lastkeys/secret_key.gpg
+gpg --import ${GPG_BACKUP_DIR}/lastkeys/secret_subkeys.gpg
+
+## Update algorithme, expiration date, password
 ```
 gpg --edit-key ${GPG_USERID}
+key 0
 setpref
+expire
+passwd
+save
+```
+
+# Yubikey
+
+# Show gpg content
+
+```
+gpg2 --card-status
+```
+
+## Edit GPG PIN
+
+```
+gpg2 --card-edit
+passwd
+```
+
+## Edit gpg informations
+
+```
+gpg2 --card-edit
+name
+lang
+login
+sex
+```
+
+## Move gpg to yubikey
+
+```
+gpg2 -K
+gpg2 --expert --edit-key <GPGID>
+key 1
+keytocard
+key 2
+keytocard
+key 3
+keytocard
+save
+quit
+```
+
+
+## Verify moved gpg key to yubikey
+```
+gpg2 -K
+# You should see 'ssb>', indicates that the subkey key does not have a private key
 ```
 
 ## GPG agent configuration for SSH and GIT
