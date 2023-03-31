@@ -1,28 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    
     <url>
-     <loc>http://badele.github.io/mydocs//</loc>
-     <lastmod>2015-12-05</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>http://badele.github.io/mydocs/</loc>
+         <lastmod>2023-03-31</lastmod>
+         <changefreq>daily</changefreq>
     </url>
-    
-
-    
     <url>
-     <loc>http://badele.github.io/mydocs//system/</loc>
-     <lastmod>2015-12-05</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>http://badele.github.io/mydocs/app/ranger/</loc>
+         <lastmod>2023-03-31</lastmod>
+         <changefreq>daily</changefreq>
     </url>
-    
-
-    
     <url>
-     <loc>http://badele.github.io/mydocs//development/</loc>
-     <lastmod>2015-12-05</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>http://badele.github.io/mydocs/developement/shell/</loc>
+         <lastmod>2023-03-31</lastmod>
+         <changefreq>daily</changefreq>
     </url>
-    
-
+    <url>
+         <loc>http://badele.github.io/mydocs/security/gpg/</loc>
+         <lastmod>2023-03-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://badele.github.io/mydocs/security/pass/</loc>
+         <lastmod>2023-03-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://badele.github.io/mydocs/system/luks_on_usb/</loc>
+         <lastmod>2023-03-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://badele.github.io/mydocs/system/tips/</loc>
+         <lastmod>2023-03-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://badele.github.io/mydocs/unused/snapper/</loc>
+         <lastmod>2023-03-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>
